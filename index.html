@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list by lifecon</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Todo list by lifecon</h1>
+    </header>
+    <main>
+        <div id="lists">
+            <h2 style="margin: 0;">My lists</h2>
+            <ul id="listsList">
+                <li><p>First task list</p></li>
+                <li><p>Second task list</p></li>
+            </ul>
+            <div id="createList">
+                <img src="./img/white-plus-icon-3.png" alt="plus-add-icon" id="createListBtn">
+                <input type="text" name="createListTextfieldName" id="createListTextfield" placeholder="Enter list name">
+            </div>
+        </div>
+
+        <div id="tasks">
+            <div id="listNameWrapper">
+                <h2 id="listName" style="margin: 0;">Your list name</h2>
+                <p>Tasks remaining: 0</p>
+            </div>
+            <ul id="tasksList">
+                <li>
+                    <input type="checkbox" class="taskCheck">
+                    <h3 class="taskName">First task name</h3>
+                </li>
+            </ul>
+            <div id="createTask">
+                <img src="./img/white-plus-icon-3.png" alt="plus-add-icon" id="createTaskBtn">
+                <input type="text" name="createListTextfieldName" id = "createTaskTextfield" placeholder="Enter task name">
+            </div>
+        </div>
+    </main>
+    <footer>
+        some copyright shit
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
