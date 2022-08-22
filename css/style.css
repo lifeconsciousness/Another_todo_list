@@ -1,44 +1,70 @@
-:root {
-  --bg-main: rgb(50, 44, 52);
-  --white-main: beige;
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-main);
-  color: var(--white-main);
-}
-
-#createListBtn {
-  width: 30px;
-  height: 30px;
+* {
+  background-color: rgb(54, 54, 49);
+  color: antiquewhite;
 }
 
 #createTaskBtn {
   width: 30px;
-  height: 30px;
-  filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(0%) contrast(80%);
 }
 
-main {
-  display: grid;
-  grid-template-columns: 0.7fr 1fr;
-  justify-items: center;
-  margin-right: 25rem;
-  margin-left: 5rem;
-  margin-top: 2rem;
+#createListBtn {
+  width: 30px;
 }
 
-h1, h2, h3 {
-  font-weight: normal;
+#tasksList > li {
+  display: flex;
 }
 
-#tasks {
-  background-color: var(--white-main);
-  color: var(--bg-main);
-  margin-left: 4rem;
-  padding: 1rem 2rem;
-  width: 27rem;
-  min-height: 13rem;
+li:hover {
+  cursor: pointer;
+}
+
+#createList {
+  display: flex;
+}
+#createList #createListTextfield {
+  height: 25px;
+  width: 210px;
+  margin-left: 7px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+}
+
+#createTask {
+  display: flex;
+}
+#createTask #createTaskTextfield {
+  height: 25px;
+  width: 310px;
+  margin-left: 7px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+}
+
+#createTask:hover {
+  cursor: pointer;
+}
+
+#createList:hover {
+  cursor: pointer;
+}
+
+#listNameWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 350px;
+}
+
+.task {
+  font-size: larger;
 }/*# sourceMappingURL=style.css.map */
