@@ -6,45 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list by lifecon</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./index.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Todo list by lifecon</h1>
     </header>
+
     <main style="margin-left: 20px;">
+
         <form id="lists" data-new-list-form>
             <h2 style="margin: 0;">My lists</h2>
+
             <ul id="listsList" data-lists>
                 <li><p>First task list</p></li>
                 <li><p>Second task list</p></li>
             </ul>
             <div id="createList">
-                <img src="./img/white-plus-icon-3.png" alt="plus-add-icon" id="createListBtn">
+                <button type="submit">+</button>
                 <input data-new-list-input type="text" name="createListTextfieldName" id="createListTextfield" placeholder="Enter list name">
             </div>
+            <label for="deleteToggle">Delete list by selecting it</label><input type="checkbox" name="deleteToggle" id="deleteToggle">
+            
         </form>
 
-        <div id="tasks">
+        <div id="tasks" data-lists-display-container>
             <div id="listNameWrapper">
-                <h2 id="listName" style="margin: 0;">Your list name</h2>
-                <p style="margin: 0">Tasks remaining: 0</p>
+                <h2 id="listName" style="margin: 0;" data-list-title>Create the list</h2>
+                <p style="margin: 0" data-list-count>Tasks remaining: 0</p>
             </div>
-            <ul id="tasksList">
-                <li class="task">Thingtodo</li>
+            <ul id="tasksList" data-tasks>
+                <li class="task">
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1"><span class="custom-checkbox">Then create some tasks</span></label>
+                </li>
             </ul>
             <div id="createTask">
-                <img src="./img/white-plus-icon-3.png" alt="plus-add-icon" id="createTaskBtn">
-                <input type="text" name="createListTextfieldName" id = "createTaskTextfield" placeholder="Enter task name">
+                <form action="" data-new-task-form>
+                    <button type="submit">+</button>
+                    <input type="text" name="createListTextfieldName" id = "createTaskTextfield" placeholder="Enter task name" data-new-task-input>
+                </form>
             </div>
-            <button id="clear" style="margin-top: 10px;">Clear completed tasks</button>
-            <button id="delList">Delete list</button>
+            <button id="clear" data-clear-completed-tasks style="margin-top: 10px;">Clear completed tasks</button>
         </div>
 
     </main>
-    <footer>
-        link to my github
-    </footer>
 
-    <script defer src="./index.js"></script>
+    <template id="task-template">
+        <li class="task">
+            <input type="checkbox">
+            <label><span class="custom-checkbox"></span></label>
+        </li>
+    </template>
 </body>
 </html>
